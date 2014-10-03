@@ -49,17 +49,18 @@ class StepsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_step
-      @step = Step.find(params[:id])
-    end
 
-    def load_list
-      @list = List.find(params[:list_id])
-    end
-    
-    # Only allow a trusted parameter "white list" through.
-    def step_params
-      params.require(:step).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_step
+    @step = Step.find(params[:id])
+  end
+
+  def load_list
+    @list = List.find(params[:list_id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def step_params
+    params.require(:step).permit(:name)
+  end
 end

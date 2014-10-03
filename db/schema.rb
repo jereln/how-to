@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001190043) do
+ActiveRecord::Schema.define(version: 20_141_001_190_043) do
 
-  create_table "lists", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'lists', force: true do |t|
+    t.string 'name'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  create_table "steps", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "list_id"
+  create_table 'steps', force: true do |t|
+    t.string 'name'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
+    t.string 'list_id'
   end
 
 end
